@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     
     init() {
         print("logged")
@@ -18,12 +18,12 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Main")
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
