@@ -125,10 +125,10 @@
 		C6983C6C2B7DD4BB00EAC750 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				C6986D592B7E7C130067041B /* GoogleService-Info.plist */,
-				C6983C6D2B7DD4BB00EAC750 /* ToDoListApp.swift */,
-				C6983C6F2B7DD4BB00EAC750 /* ContentView.swift */,
-				C6983C712B7DD4BD00EAC750 /* Assets.xcassets */,
+				C6986D5E2B7ECC640067041B /* Other */,
+				C6986D5D2B7ECC470067041B /* Models */,
+				C6986D5C2B7ECC150067041B /* ViewModels */,
+				C6986D5B2B7ECBF70067041B /* Views */,
 				C6983C732B7DD4BD00EAC750 /* Preview Content */,
 			);
 			path = ToDoList;
@@ -140,6 +140,38 @@
 				C6983C742B7DD4BD00EAC750 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6986D5B2B7ECBF70067041B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6983C6F2B7DD4BB00EAC750 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6986D5C2B7ECC150067041B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C6986D5D2B7ECC470067041B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6986D5E2B7ECC640067041B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C6983C712B7DD4BD00EAC750 /* Assets.xcassets */,
+				C6986D592B7E7C130067041B /* GoogleService-Info.plist */,
+				C6983C6D2B7DD4BB00EAC750 /* ToDoListApp.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
