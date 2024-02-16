@@ -17,7 +17,11 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 // header
-                HeaderView()
+                HeaderView(
+                    title: "To Do List",
+                    subtitle: "Get It Done",
+                    backgroundColor: .pink
+                )
                 
                 // login
                 
@@ -54,6 +58,7 @@ struct LoginView: View {
                         Text("New Around Here?")
                             .foregroundColor(Color("MatchThemeColor"))
                             .font(.system(size: 20))
+                            .padding(.bottom, 1)
                         NavigationLink(
                             "Create An Account",
                             destination: RegisterView()
@@ -62,7 +67,7 @@ struct LoginView: View {
                     }
                     .padding(.bottom, 75)
                 }
-                .frame(width: UIScreen.main.bounds.width * 3, height: 180)
+                .frame(width: UIScreen.main.bounds.width * 3, height: 250)
                 .offset(y: 80)
                 
                 
