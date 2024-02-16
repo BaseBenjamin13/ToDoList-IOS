@@ -63,6 +63,7 @@
 		C6986D782B7ED2160067041B /* NewItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D772B7ED2160067041B /* NewItemViewViewModel.swift */; };
 		C6986D7A2B7ED2240067041B /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D792B7ED2240067041B /* LoginViewViewModel.swift */; };
 		C6986D7C2B7ED22F0067041B /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D7B2B7ED22F0067041B /* RegisterViewViewModel.swift */; };
+		C6986D7E2B7EF86C0067041B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D7D2B7EF86C0067041B /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		C6986D772B7ED2160067041B /* NewItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewViewModel.swift; sourceTree = "<group>"; };
 		C6986D792B7ED2240067041B /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 		C6986D7B2B7ED22F0067041B /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
+		C6986D7D2B7EF86C0067041B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				C6986D632B7ECF3F0067041B /* NewItemView.swift */,
 				C6986D652B7ECF4D0067041B /* LoginView.swift */,
 				C6986D672B7ECF5C0067041B /* RegisterView.swift */,
+				C6986D7D2B7EF86C0067041B /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6986D762B7ED2030067041B /* ToDoListItemViewViewModel.swift in Sources */,
+				C6986D7E2B7EF86C0067041B /* HeaderView.swift in Sources */,
 				C6986D662B7ECF4E0067041B /* LoginView.swift in Sources */,
 				C6986D7C2B7ED22F0067041B /* RegisterViewViewModel.swift in Sources */,
 				C6983C702B7DD4BB00EAC750 /* MainView.swift in Sources */,
