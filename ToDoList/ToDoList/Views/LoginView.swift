@@ -28,28 +28,27 @@ struct LoginView: View {
                 Form {
                     TextField("Email Address", text: $email)
                         .textFieldStyle(DefaultTextFieldStyle())
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .autocorrectionDisabled()
+                    
                     SecureField("Password", text: $password)
                         .textFieldStyle(DefaultTextFieldStyle())
                 
-                    Button {
+                    TLButton(
+                        title: "Log In",
+                        backgroundColor: .blue
+                    ) {
                         print("Attempt Login")
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(Color.blue)
-                        
-                            Text("Log In")
-                                .foregroundColor(Color("MatchThemeColor"))
-                                .bold()
-                        }
                     }
                 }
+                
                 
                 // Register
                 ZStack {
                     RoundedRectangle(cornerRadius: 0)
                         .foregroundColor(Color.pink)
                         .rotationEffect(Angle(degrees: -15))
+                        .brightness(0.15)
                     RoundedRectangle(cornerRadius: 0)
                         .foregroundColor(Color.pink)
                         .rotationEffect(Angle(degrees: 15))

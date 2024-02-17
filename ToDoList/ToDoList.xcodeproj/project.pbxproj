@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C68E93712B806385009D1BA5 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68E93702B806385009D1BA5 /* TLButton.swift */; };
 		C6983C6E2B7DD4BB00EAC750 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6983C6D2B7DD4BB00EAC750 /* ToDoListApp.swift */; };
 		C6983C702B7DD4BB00EAC750 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6983C6F2B7DD4BB00EAC750 /* MainView.swift */; };
 		C6983C722B7DD4BD00EAC750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6983C712B7DD4BD00EAC750 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C68E93702B806385009D1BA5 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		C6983C6A2B7DD4BB00EAC750 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6983C6D2B7DD4BB00EAC750 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		C6983C6F2B7DD4BB00EAC750 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				C6986D652B7ECF4D0067041B /* LoginView.swift */,
 				C6986D672B7ECF5C0067041B /* RegisterView.swift */,
 				C6986D7D2B7EF86C0067041B /* HeaderView.swift */,
+				C68E93702B806385009D1BA5 /* TLButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				C6983C702B7DD4BB00EAC750 /* MainView.swift in Sources */,
 				C6986D7A2B7ED2240067041B /* LoginViewViewModel.swift in Sources */,
 				C6986D702B7ED1C70067041B /* MainViewViewModel.swift in Sources */,
+				C68E93712B806385009D1BA5 /* TLButton.swift in Sources */,
 				C6986D622B7ECF2E0067041B /* ToDoListView.swift in Sources */,
 				C6986D682B7ECF5C0067041B /* RegisterView.swift in Sources */,
 				C6986D722B7ED1DF0067041B /* ProfileViewViewModel.swift in Sources */,
