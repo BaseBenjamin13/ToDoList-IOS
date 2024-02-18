@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ToDoListItemsView: View {
+struct ToDoListView: View {
     var body: some View {
         Text("To Do's")
     }
 }
 
 #Preview {
-    ToDoListItemsView()
+    ToDoListView()
 }
