@@ -24,13 +24,19 @@ struct ToDoListView: View {
             .navigationTitle("To Do List")
             .toolbar {
                 Button {
-                    print("add todo")
+                    viewModel.showingNewItemView = true
                 } label: {
                     Image(systemName: "plus.circle")
                         .symbolRenderingMode(.hierarchical)
                         .foregroundStyle(.pink)
                         .font(.system(size: 35))
                 }
+            }
+            .sheet(isPresented: $viewModel.showingNewItemView)
+            {
+                NewItemView(
+                    newItemPresented: $viewModel.showingNewItemView
+                )
             }
         }
     }

@@ -9,12 +9,15 @@ import SwiftUI
 
 struct NewItemView: View {
     @StateObject var viewModel = NewItemViewViewModel()
+    @Binding var newItemPresented: Bool
     
     var body: some View {
         VStack {
             Text("New To Do")
                 .font(.system(size: 32))
                 .bold()
+                .padding(.top, 75)
+            
             Form {
                 TextField("Title", text: $viewModel.title)
                     .textFieldStyle(DefaultTextFieldStyle())
@@ -23,14 +26,29 @@ struct NewItemView: View {
                     .datePickerStyle(GraphicalDatePickerStyle())
              
                 TLButton(title: "Save", backgroundColor: .pink) {
-                    viewModel.save()
+                    if viewModel.canSave {
+                        viewModel.save()
+                        newItemPresented = false
+                    } else {
+                        viewModel.showAlert = true
+                    }
                 }
                 .padding()
+            }
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text("Please fill in all field and make sure due date is today or later")
+                )
             }
         }
     }
 }
 
 #Preview {
-    NewItemView()
+    NewItemView(newItemPresented: Binding(get: {
+        return true
+    }, set: {_ in
+        
+    }))
 }
