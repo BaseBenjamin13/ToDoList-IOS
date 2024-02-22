@@ -13,61 +13,59 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    .frame(width: 125, height: 125)
-                    .padding()
-                
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("Name: ")
-                            .bold()
-                        Text("Benji")
-                    }
-                    .padding(5)
-                    HStack {
-                        Text("Email: ")
-                            .bold()
-                        Text("BenmoirgiaF")
-                    }
-                    .padding(5)
-                    HStack {
-                        Text("Member Since: ")
-                            .bold()
-                        Text("1776")
-                    }
-                    .padding(5)
+                if let user = viewModel.user {
+                    profile(user: user)
+                } else {
+                    Text("Loading Profile...")
                 }
-                .padding()
-                
-                Spacer()
-                Button("Log Out") {
-                    viewModel.logOut()
-                }
-                .tint(.red)
-                .padding(60)                
-//                Button {
-//                    viewModel.logOut()
-//                } label: {
-//                    ZStack {
-//                        RoundedRectangle(cornerRadius: 10)
-//                            .foregroundColor(.black)
-//                        
-//                        Text("Log Out")
-//                            .foregroundColor(.red)
-//                            .bold()
-//                    }
-//                    .frame(width: 150, height: 100)
-//                }
-////                .foregroundColor(.blue)
-//                .padding()
-
             }
             .navigationTitle("Profile")
         }
+        .onAppear {
+            viewModel.fetchUser()
+        }
     }
+    
+    
+    @ViewBuilder
+    func profile(user: User) -> some View {
+        Image(systemName: "person.circle")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .foregroundColor(.pink)
+            .frame(width: 125, height: 125)
+            .padding()
+        
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Name: ")
+                    .bold()
+                Text(user.name)
+            }
+            .padding(5)
+            HStack {
+                Text("Email: ")
+                    .bold()
+                Text(user.email)
+            }
+            .padding(5)
+            HStack {
+                Text("Member Since: ")
+                    .bold()
+                Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
+            }
+            .padding(5)
+        }
+        .padding()
+        
+        Spacer()
+        Button("Log Out") {
+            viewModel.logOut()
+        }
+        .tint(.red)
+        .padding(60)
+    }
+    
 }
 
 #Preview {
